@@ -45,7 +45,7 @@ body{
     margin-bottom: 1.8rem;
 }
 .card-title{
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-600);
     font-size: 2.3rem;
@@ -69,17 +69,25 @@ body{
     border-radius: 0 0 .5rem .5rem;
 }
 .card-btn{
-    padding: .8rem 1.5rem;
+    width: 140px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     border-radius: 50px;
     background-color: var(--very-light-gray-background-headings-buttons);
+}
+.card-btn:hover{
+    background-color: transparent;
+    border: 3px solid var(--very-light-gray-background-headings-buttons);
+    color: var(--transparent-white-paragraphs);
 }
 .btn-one,
 .btn-two,
 .btn-three{
     font-weight: var(--font-weight-500);
 }
-
 .btn-one{
     color:var(--bright-orange);
 }
@@ -88,4 +96,35 @@ body{
 }
 .btn-three{
     color: var(--very-dark-cyan);
+}
+
+/*========== media queries ==========*/
+
+@media screen and (min-width: 875px){
+    .main-container{
+        margin: 0;
+        height: 100dvh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-content{
+        max-width: 20rem;
+        height: 31rem;
+        position: relative;
+    }
+    .card-btn{
+        position: absolute;
+        bottom: 2.5rem;
+    }
+    .card-description{
+        margin-bottom: 6rem;
+        margin-right: 1rem;
+    }
+    .first-card{
+        border-radius: .5rem 0 0 .5rem;
+    }
+    .third-card{
+        border-radius: 0 .5rem .5rem 0;
+    }
 }
